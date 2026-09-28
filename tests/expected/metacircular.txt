@@ -1,0 +1,10 @@
+(+ 1 2)  =>  3
+(define (fact n) (if (= n 0) 1 (* n (fact (- n 1)))))  =>  fact
+(fact 10)  =>  3628800
+(define (map1 f l) (if (null? l) '() (cons (f (car l)) (map1 f (cdr l)))))  =>  map1
+(map1 (lambda (x) (* x x)) (list 1 2 3 4 5))  =>  (1 4 9 16 25)
+(let ((x 3) (y 4)) (+ (* x x) (* y y)))  =>  25
+(define counter 0)  =>  counter
+(begin (set! counter (+ counter 1)) (set! counter (+ counter 1)) counter)  =>  2
+(define (fib n) (cond ((< n 2) n) (else (+ (fib (- n 1)) (fib (- n 2))))))  =>  fib
+(fib 15)  =>  610
