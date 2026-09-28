@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyscheme"
+version = "1.0.0"
+description = "A Scheme interpreter written from scratch in pure Python (CEK machine, proper tail calls, call/cc, syntax-rules)."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "useless-husband" }]
+keywords = ["scheme", "interpreter", "lisp", "sicp", "education"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Software Development :: Interpreters",
+    "Intended Audience :: Education",
+]
+dependencies = []
+
+[project.scripts]
+pyscheme = "pyscheme.repl:main"
+
+[project.urls]
+Homepage = "https://github.com/useless-husband/pyscheme"
+
+[tool.setuptools]
+packages = ["pyscheme"]
+
+[tool.setuptools.package-data]
+pyscheme = ["*.scm"]
